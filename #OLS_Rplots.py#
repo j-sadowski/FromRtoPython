@@ -47,7 +47,7 @@ def Rplot3(fitted_model, sqrt_norm_resid = pd.Series([]), fits = pd.Series([])):
     fig, ax = plt.subplots()
     ax.scatter(fits, sqrt_norm_resid, edgecolors = 'k', facecolors = 'none')
     ax.plot(smoothed[:,0],smoothed[:,1],color = 'r')
-    ax.set_ylabel('Sqrt Residuals')
+    ax.set_ylabel('$\sqrt{|Studentized Residuals|}$')
     ax.set_xlabel('Fitted Values')
     ax.set_title('Scale-Location')
     for i in top3.index:
