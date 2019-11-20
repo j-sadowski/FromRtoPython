@@ -1,16 +1,16 @@
+"""
+A module to construct the base R plot(lm_object) linear regression plots.
+
+By: Jason Sadowski
+Date: 2019-11-19
+"""
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.nonparametric.smoothers_lowess import lowess
 import numpy as np
 import scipy.stats as stats
-"""
-A module to construct the base R plot(lm_object) linear regression plots.
-Credit for the annotation and Cook's D lines goes to:
-  https://emredjan.github.io/blog/2017/07/11/emulating-r-plots-in-python/
-By: Jason Sadowski
-Date: 2019-11-19
-"""
 
 def ResidFitted(fitted_model, residuals = None, fits = None, ax = None):
   """
@@ -148,6 +148,9 @@ def Leverage(fitted_model, student_residuals = None,\
   ---------------------------------------------------------
   ax: A matplotlib axis object
 
+  The approach for coding the Cook's D lines comes from:
+  https://emredjan.github.io/blog/2017/07/11/emulating-r-plots-in-python/
+  
   By: Jason Sadowski
   Date: 2019-11-19
   """
